@@ -8,9 +8,25 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
+    <menu type ="toolbar">
 
+        <li>
+            <menu label="file">
+                <button type="button" onclick="">HOME</button>
+                <button type="button" onclick="">CONTAC</button>
+                <button type="button" onclick="">RECOMEND</button>
+
+            </menu>
+       </li>
+    </menu>
+
+
+    @RenderBody()
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required:=False)
+    
+    
+
+
 </body>
 </html>
