@@ -39,3 +39,8 @@ C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\C
 C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\obj\Debug\CurriculumApp.csprojResolveAssemblyReference.cache
 C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\obj\Debug\CurriculumApp.dll
 C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\obj\Debug\CurriculumApp.pdb
+C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\bin\Postal.dll
+C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\bin\System.Web.Helpers.dll
+C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\bin\Postal.xml
+C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\bin\System.Web.Helpers.xml
+C:\Users\Tavo\Documents\Visual Studio 2012\Projects\Repositorios\CurriculumApp\CurriculumApp\bin\es\System.Web.Helpers.resources.dll

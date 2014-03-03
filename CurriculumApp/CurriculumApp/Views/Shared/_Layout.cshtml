@@ -6,11 +6,58 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+   
 </head>
-<body>
-    @RenderBody()
+<body>         
+   
+ <div id="main">
+    <header>   
 
-    @Scripts.Render("~/bundles/jquery")
-    @RenderSection("scripts", required: false)
+
+      <div id="logo">
+        <div id="logo_text">                  
+          <h2>Gustavo Araya Salas</h2>
+            <h1>Inginiero en Software</h1>
+        </div>
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li class="selected" onkeypress="">@Html.ActionLink("Home","Index")</></li>         
+           <li class="selected">@Html.ActionLink("Contacto","Contact")</li>    
+          <li class="selected">@Html.ActionLink("Recomendaciones","Recommend")</></li>         
+        </ul>
+      </nav>
+    </header>
+
+             
+  </div>
+     @Scripts.Render("~/bundles/jquery")
+    @RenderBody()
+     @RenderSection("scripts", required: false)  
+ 
+     <footer>
+      <p>Gustavo Araya Salas | @Html.ActionLink("tavo.cr23@gmail.com","Contact")</p>
+    </footer>
+
+
+
+  <p>&nbsp;</p>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.easing-sooper.js"></script>
+  <script type="text/javascript" src="js/jquery.sooperfish.js"></script>
+  <script type="text/javascript" src="js/image_fade.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('ul.sf-menu').sooperfish();
+      });
+
+
+  </script>
+          
+     
+
+
+
 </body>
 </html>
