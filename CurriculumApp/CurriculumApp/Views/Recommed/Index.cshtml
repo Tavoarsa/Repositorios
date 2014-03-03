@@ -7,7 +7,24 @@
 @Html.ActionLink("Create New", "Create")
 
 <table>
+    <tr>
+        <th>Nombre</th>
+        <th>Telefono</th>
+        <th>Email</th>
+        <th>Comentario</th>
+        
 
+    </tr>
+
+    @foreach (var item in ViewBag.recommends)
+    {
+        <tr>
+            <td>@item.Nombre</td>
+            <td>@item.Telefono</td>
+            <td>@item.Email</td>
+            <td>@item.Comentario</td>
+        </tr>
+    }
 
 
 </table>
