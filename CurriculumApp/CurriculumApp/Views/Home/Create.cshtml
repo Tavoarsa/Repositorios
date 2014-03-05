@@ -4,28 +4,33 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm())
-{
+ @using ( Html.BeginForm())
+    
+    {
 
 <div id="contact-form">
-    <h1>Contacteme</h1>
+    <h1>Recomendar</h1>
 
+   
+        
+    
     <form>
-        <label for="nombre">Nombre:<span class="required">*</span></label>
+        <label for="name">Name:<span class="required">*</span></label>
         <input type="text" id="nombre" name="nombre" value="" placeholder="Su Nombre" required="required" />
-
+      
         <label for="telefono">Telefono:<span class="required">*</span></label>
-        <input type="text" id="telefono" name="telefono" value="" placeholder="Su Nombre" required="required" />
+        <input type="text" id="telefono" name="telefono" value="" placeholder="Su telefono" required="required" />
 
-        <label for="email">Email Address: <span class="required">*</span></label> 
+        <label for="email">Email Address:<span class="required">*</span></label> 
         <input type="email" id="email" name="email" value="" placeholder="sucorreo@email.com" required="required" /> 
 
 
-         <label for="comentario">Comentario: <span class="required">*</span></label> 
+         <label for="message">Comentario:<span class="required">*</span></label> 
          <textarea id="comentario" name="comentario" placeholder="Escriba su comentario." required="required"></textarea> 
 
         <input type="submit" value="ENVIAR!" id="submit" />
 
     </form>
 </div>
-}
+   
+ }
