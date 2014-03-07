@@ -2,19 +2,22 @@
     ViewBag.Title = "Recommend";
 }
 
-<h2>Recommend</h2>
+
+<div class="create">
+
+    @Html.ActionLink("Nueva Recomendación", "Create")
+
+</div>
 
 
-
-@Html.ActionLink("Create New", "Create")
-
-<table>
+<div class="table_recommend" >
+<table >
     <tr>
         <th>Nombre</th>
         <th>Telefono</th>
         <th>Email</th>
         <th>Comentario</th>
-        <th>Actions</th>
+       <!-- <th>Actions</th>-->
         
 
     </tr>
@@ -26,12 +29,17 @@
             <td>@item.Telefono</td>
             <td>@item.Email</td>
             <td>@item.Comentario</td>
-            <td>
+           <!-- <td>
                     @Html.ActionLink("Delete","Delete", new { id=item.id})                  
                    
-           </td>
+           </td>-->
         </tr>
     }
 
 
 </table>
+
+</div>
+
+
+

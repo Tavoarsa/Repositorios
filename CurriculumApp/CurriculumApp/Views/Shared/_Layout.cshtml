@@ -20,12 +20,13 @@
             <h1>Inginiero en Software</h1>
         </div>
       </div>
-      <nav>
+      <nav>  
+                    
         <ul class="sf-menu" id="nav">
-
-          <li class="" onkeypress="">@Html.ActionLink("Home","Home")</></li>         
-           <li class="selected">@Html.ActionLink("Contacto","Contact")</li>    
-          <li class="selected">@Html.ActionLink("Recomendaciones","Recommend")</></li>         
+          <li id= "home" class="active" onclick="actual()">@Html.ActionLink("Home","Home")</></li>         
+          <li id= "contact" class="active">@Html.ActionLink("Contacto","Contact")</li>    
+          <li  id= "recommend" class="active">@Html.ActionLink("Recomendaciones","Recommend")</li>
+                    
         </ul>
       </nav>
     </header>
@@ -39,7 +40,20 @@
       <p>Gustavo Araya Salas | @Html.ActionLink("tavo.cr23@gmail.com","Contact")</p>
     </footer>
 
+    <script>
+        
+        function actual()
+        {
+            do{
+                document.getElementById("home").style.backgroundColor= 'red';
+            }while(onclick=false)
 
+          
+            
+        }
+
+
+    </script>
  
 
 
