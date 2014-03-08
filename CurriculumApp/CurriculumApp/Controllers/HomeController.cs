@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using Postal;
 using CurriculumApp.Models;
+using System.Net;
 
 namespace CurriculumApp.Controllers
 {
@@ -18,17 +19,15 @@ namespace CurriculumApp.Controllers
         
         public ActionResult Home()
         {
-            /*dynamic email = new Email("Example");
-            email.To = "webninja@example.com";
-            email.FunnyLink = db.GetRandomLolcatLink();
-            email.Send();*/
-            return View();
+                       return View();
         }
 
         public ActionResult Contact()
         {
             return View();
         }
+
+        
 
         public ActionResult Recommend()
         {
@@ -39,6 +38,42 @@ namespace CurriculumApp.Controllers
             
         }
 
+        public static void SendEmail(string body="hidjd")
+    {
+            MailMessage mailMessage= new MailMessage("tavo.cr23@gmail.com","tavo.cr23@gmail.com");
+            mailMessage.Subject="Hola";
+            mailMessage.Body=body;
+            SmtpClient smtpClient = new SmtpClient ("smtp.gmail.com",587);
+            smtpClient.Credentials=new System.Net.NetworkCredential()
+            {
+                UserName="tavo.cr23@gmail.com",
+                Password="mariana1234-2665735"
+            };
+            smtpClient.EnableSsl=true;
+            smtpClient.Send(mailMessage);
+    }
+        
+
+        [HttpPost]
+        public ActionResult SendEmail(string name,  string email, string message)
+        {
+
+            MailMessage mail = new MailMessage();
+            SmtpClient Smtp = new SmtpClient();
+            mail.From = new MailAddress("tavo.cr23@gmail.com");
+            //Destinatario
+            mail.To.Add(new MailAddress(email));
+           
+            mail.Body = message;
+            Smtp.Host = "smtp.gmail.com";
+            Smtp.Port = 587;
+            Smtp.Credentials = new System.Net.NetworkCredential("tavo.cr23@gmail.com", "mariana1234-2665735");
+            Smtp.EnableSsl = true;
+            Smtp.Send(mail);
+
+            return RedirectToAction("Contact");
+        }
+            
 
         public ActionResult Create()
         {
@@ -84,6 +119,10 @@ namespace CurriculumApp.Controllers
         db.SaveChanges();
         return RedirectToAction("Recommend");
     }
+
+
+
+
 
     protected override void Dispose(bool disposing)
     {
