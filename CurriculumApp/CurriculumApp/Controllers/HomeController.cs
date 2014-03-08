@@ -61,7 +61,7 @@ namespace CurriculumApp.Controllers
             MailMessage mail = new MailMessage();
             SmtpClient Smtp = new SmtpClient();
             mail.From = new MailAddress("tavo.cr23@gmail.com");
-            //Destinatario
+            
             mail.To.Add(new MailAddress(email));
            
             mail.Body = message;
