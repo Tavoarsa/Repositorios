@@ -66,7 +66,7 @@ namespace CurriculumApp.Controllers
            
             mail.Body = message;
             Smtp.Host = "smtp.gmail.com";
-            Smtp.Port = 587;
+            Smtp.Port = 25;
             Smtp.Credentials = new System.Net.NetworkCredential("tavo.cr23@gmail.com", "mariana1234-2665735");
             Smtp.EnableSsl = true;
             Smtp.Send(mail);
