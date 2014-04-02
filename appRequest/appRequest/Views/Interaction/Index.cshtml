@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Interaction</h2>
+
+ <table>
+        <tr>
+            <th>Nombre</th>            
+            <th>Actions</th>
+        </tr>
+        @foreach (var item in ViewBag.interactions)
+        {
+            <tr>
+                <td>@item.Parameter</td>             
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.Id })                     
+                </td>
+            </tr>
+        }
+    </table>

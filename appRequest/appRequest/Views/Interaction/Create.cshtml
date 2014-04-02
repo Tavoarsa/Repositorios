@@ -8,27 +8,12 @@
         <legend>Interation</legend>
         
         <div class="editor-label">
-            <label>Response Iteraction</label>
-        </div>
+            <label>Interation 1</label>
+        </div>      
        
-        <div class="editor-label">
-            <label>Teléfono</label>
-        </div>
         <div class="editor-field">
-            <input name="telefono"/>
-        </div>
-        <div class="editor-label">
-            <label>Aula</label>
-        </div>
-
-        <div class="editor-field">
-            <select name="aula_id">
-                @foreach (var item in ViewBag.aulas)
-                {
-                    <option value="@item.Id">@item.Descripcion</option>
-                }
-            </select>
-        </div>
+            <input name="parameter"/>
+        </div>        
 
         <p>
             <input type="submit" value="Create" />

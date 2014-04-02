@@ -43,7 +43,7 @@ namespace appRequest.Controllers
             return View();
 
         }
-        [HttpPost]
+       /* [HttpPost]
         public ActionResult Edit()
         {
             return View();
@@ -59,7 +59,7 @@ namespace appRequest.Controllers
             return View();
 
         }
-
+        */
 
         protected override void Dispose(bool disposing)
         {
