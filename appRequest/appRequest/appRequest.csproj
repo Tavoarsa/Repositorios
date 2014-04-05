@@ -176,6 +176,7 @@
     <Compile Include="Models\Parameter.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Results.cs" />
+    <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
