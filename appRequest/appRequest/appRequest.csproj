@@ -292,6 +292,7 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Interaction\Create.cshtml" />
     <Content Include="Views\Interaction\Index.cshtml" />
+    <Content Include="Views\Request\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
