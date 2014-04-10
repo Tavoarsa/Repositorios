@@ -16,7 +16,7 @@ namespace appRequest
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Interaction", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "Request", action = "Create", id = UrlParameter.Optional }
             );
         }
     }
