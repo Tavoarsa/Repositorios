@@ -7,36 +7,33 @@ using System.Web.Mvc;
 
 namespace appRequest.Controllers
 {
-    public class RequestController : Controller
+    public class ParameterController : Controller
     {
+
         private ContextDb db = new ContextDb();
         //
-        // GET: /Request/
+        // GET: /Parameter/
 
         public ActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
-        public ActionResult Create(string  name="",string urlBase="",string action="")
+        public ActionResult Create(int id_request=0,string urlKey="",string value="")
         {
-            Request request = new Request();
-            request.name = name;
-            request.urlBase = urlBase;
-            request.action = action;
+            Parameter parameter = new Parameter();
+            parameter.Id_Request = id_request;
+            parameter.UrlKey = urlKey;
+            parameter.Values = value;
             if (ModelState.IsValid)
             {
-                db.Requests.Add(request);
+                db.Parameters.Add(parameter);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-           
             return View();
-        }
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
+
         }
 
     }
