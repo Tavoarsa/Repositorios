@@ -16,8 +16,8 @@ namespace appRequest.Controllers
 
         public ActionResult Index()
         {
-            List<Interaction> interaction = db.Interactions.ToList();
-            ViewBag.interactions = interaction;        
+            /*List<Interaction> interaction = db.Interactions.ToList();
+            ViewBag.interactions = interaction;    */    
             return View();
         }
         public ActionResult Create()
@@ -27,14 +27,7 @@ namespace appRequest.Controllers
         [HttpPost]
         public ActionResult Create(Parameter parameter)
         {
-            Interaction newInteraction = new Interaction();
-            newInteraction.Parameter = parameter;
-            if (ModelState.IsValid)
-            {
-                db.Interactions.Add(newInteraction);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+           
 
             return View();
         }

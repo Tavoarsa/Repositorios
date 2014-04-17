@@ -10,21 +10,22 @@
 
  <div id="request">
 
-    <form>
+    <fieldset>
+        <legend>New Request</legend>
         
         <div id="information">
 
     <label for="name">Name:<span class="required">*</span></label>
-        <input  type="text" id="name" placeholder="Name request"/>
+        <input  type="text" name="name" placeholder="Name request"/>
 
     <label for="urlBase">Url Base:<span class="required">*</span></label>
-        <input  type="url" id="urlBase" placeholder="Url"/>
+        <input  type="url"  name="urlBase" placeholder="Url"/>
 
     <label for="action">Action:<span class="required">*</span></label>
-        <input  type="text" id="action" placeholder="Action"/>
+        <input  type="text"   name= "action"placeholder="Action"/>
 
     <label for="httpVerb">Http Verb:<span class="required">*</span></label>
-        <input list="httpVerb" name="httpVerb">
+        <input  type="text" list="httpVerb" name="httpVerb">
             <datalist id="httpVerb">
                 <option value="GET">
                 <option value="PUT">
@@ -32,20 +33,15 @@
                 <option value="PATH">
                 <option value="DELETE">
                 </datalist>
+            
 
             </div>
+        <p>
+            <input type="submit" value= "New Request" />
+        </p>
 
-        <div id="parameters">
-            
-             <label for="key">Key:<span class="required">*</span></label>
-                <input  type="text" id="key"/>
-
-            <label for="key">Value:<span class="required">*</span></label>
-                <input  type="text" id="Value"/>
-
-
-        </div>
-    </form>
+        
+   </fieldset>
 
 
 </div>

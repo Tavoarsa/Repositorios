@@ -17,13 +17,21 @@ namespace appRequest.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Create(string  name="",string urlBase="",string action="")
+
+        public ActionResult Create()
         {
+            /*Request request = db.Requests.Find(Id);
+            ViewBag.request = request;*/
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(string  name,string urlBase,string action,string httpVerb)
+        {  
             Request request = new Request();
             request.name = name;
             request.urlBase = urlBase;
             request.action = action;
+            request.httpVerb = httpVerb;
             if (ModelState.IsValid)
             {
                 db.Requests.Add(request);
