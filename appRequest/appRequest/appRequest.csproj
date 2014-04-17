@@ -175,6 +175,7 @@
     <Compile Include="Models\ContextDb.cs" />
     <Compile Include="Models\Interaction.cs" />
     <Compile Include="Models\Parameter.cs" />
+    <Compile Include="Models\QueryRequestParameter.cs" />
     <Compile Include="Models\Request.cs" />
     <Compile Include="Models\Results.cs" />
     <Compile Include="Models\UserProfile.cs" />

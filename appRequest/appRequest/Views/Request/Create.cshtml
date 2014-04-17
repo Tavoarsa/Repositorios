@@ -13,7 +13,7 @@
     <fieldset>
         <legend>New Request</legend>
         
-        <div id="information">
+        <div id="informationRequest">
 
     <label for="name">Name:<span class="required">*</span></label>
         <input  type="text" name="name" placeholder="Name request"/>
@@ -27,15 +27,23 @@
     <label for="httpVerb">Http Verb:<span class="required">*</span></label>
         <input  type="text" list="httpVerb" name="httpVerb">
             <datalist id="httpVerb">
-                <option value="GET">
-                <option value="PUT">
+                <option value="GET">               
                 <option value="POST">
-                <option value="PATH">
-                <option value="DELETE">
+               
+                
                 </datalist>
             
 
             </div>
+        <h1>Parameter</h1>
+        <div id="informationParameter">
+            <label for="action">UrlKey<span class="required">*</span></label>
+                <input  type="text"   name= "urlKey"placeholder=""/>UrlKey
+
+            <label for="action">Value<span class="required">*</span></label>
+                <input  type="text"   name= "value"placeholder="value"/>
+        </div>
+
         <p>
             <input type="submit" value= "New Request" />
         </p>
