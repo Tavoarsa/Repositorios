@@ -1,4 +1,5 @@
-﻿using appRequest.Models;
+﻿using appRequest.Filters;
+using appRequest.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +8,8 @@ using System.Web.Mvc;
 
 namespace appRequest.Controllers
 {
+    [Authorize]
+    [InitializeSimpleMembership]
     public class RequestController : Controller
     {
         private ContextDb db = new ContextDb();
