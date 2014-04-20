@@ -175,8 +175,8 @@
     <Compile Include="Models\ContextDb.cs" />
     <Compile Include="Models\Interaction.cs" />
     <Compile Include="Models\Parameter.cs" />
-    <Compile Include="Models\QueryRequestParameter.cs" />
     <Compile Include="Models\Request.cs" />
+    <Compile Include="Models\RequestViewModel.cs" />
     <Compile Include="Models\Results.cs" />
     <Compile Include="Models\UserProfile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -308,8 +308,9 @@
     <Content Include="Views\Interaction\Create.cshtml" />
     <Content Include="Views\Interaction\Index.cshtml" />
     <Content Include="Views\Request\Index.cshtml" />
+    <Content Include="Views\Parameter\Index.cshtml" />
+    <Content Include="Views\Request\CreateP.cshtml" />
     <Content Include="Views\Request\Create.cshtml" />
-    <Content Include="Views\Parameter\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

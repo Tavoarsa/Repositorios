@@ -13,6 +13,8 @@ namespace appRequest.Models
         {
 
         }
+
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<Interaction> Interactions {get; set;}
         public DbSet<Parameter> Parameters {get; set;}
         public DbSet<Request> Requests {get; set;}

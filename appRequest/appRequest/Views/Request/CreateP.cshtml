@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "CreateP";
+}
+
+<h2>CreateP</h2>
+@using (Html.BeginForm())
+{
+
+ <div id="Parameter">
+
+    <fieldset>
+        <legend>New Parameter</legend>
+        
+        <div id="parameter">
+
+    <label for="urlKey">UrlKey<span class="required">*</span></label>
+        <input  type="text" name="urlKey" placeholder=""/>
+
+    <label for="value">Value<span class="required">*</span></label>
+        <input  type="text"  name="value" placeholder=""/>
+
+            <p>
+            <input type="submit" value= "New Parameter" />
+        </p>          
+
+        </div>        
+        </fieldset>
+        </div>
+}

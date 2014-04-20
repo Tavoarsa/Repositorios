@@ -20,5 +20,12 @@ namespace appRequest.Controllers
             
         }
 
+        public ActionResult Create()
+        {
+
+            return View();
+
+        }
+
     }
 }

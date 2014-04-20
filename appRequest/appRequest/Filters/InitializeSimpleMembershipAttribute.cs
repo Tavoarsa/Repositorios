@@ -25,11 +25,11 @@ namespace appRequest.Filters
         {
             public SimpleMembershipInitializer()
             {
-                Database.SetInitializer<UsersContext>(null);
+                Database.SetInitializer<ContextDb>(null);
 
                 try
                 {
-                    using (var context = new UsersContext())
+                    using (var context = new ContextDb())
                     {
                         if (!context.Database.Exists())
                         {

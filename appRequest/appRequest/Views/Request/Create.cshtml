@@ -1,57 +1,24 @@
-﻿@{
+﻿@model appRequest.Models.RequestViewModel
+
+@{
     ViewBag.Title = "Create";
 }
 
+<h2>Create</h2>
 
-
-@using (Html.BeginForm())
-{
-    
-
- <div id="request">
-
-    <fieldset>
-        <legend>New Request</legend>
-        
-        <div id="informationRequest">
-
-    <label for="name">Name:<span class="required">*</span></label>
-        <input  type="text" name="name" placeholder="Name request"/>
-
-    <label for="urlBase">Url Base:<span class="required">*</span></label>
-        <input  type="url"  name="urlBase" placeholder="Url"/>
-
-    <label for="action">Action:<span class="required">*</span></label>
-        <input  type="text"   name= "action"placeholder="Action"/>
-
-    <label for="httpVerb">Http Verb:<span class="required">*</span></label>
-        <input  type="text" list="httpVerb" name="httpVerb">
-            <datalist id="httpVerb">
-                <option value="GET">               
-                <option value="POST">
-               
-                
-                </datalist>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
             
-
-            </div>
-        <h1>Parameter</h1>
-        <div id="informationParameter">
-            <label for="action">UrlKey<span class="required">*</span></label>
-                <input  type="text"   name= "urlKey"placeholder=""/>UrlKey
-
-            <label for="action">Value<span class="required">*</span></label>
-                <input  type="text"   name= "value"placeholder="value"/>
-        </div>
-
-        <p>
-            <input type="submit" value= "New Request" />
-        </p>
-
-        
-   </fieldset>
-
-
-</div>
-    
-}
+            @*@Html.DisplayNameFor(model => model.Parameters)*@
+        </th>
+        <th>
+            
+            @*@Html.DisplayNameFor(model => model.Requests)*@
+        </th>
+        <th></th>
+    </tr>
+    </table>
