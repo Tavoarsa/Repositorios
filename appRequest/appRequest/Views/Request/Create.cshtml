@@ -10,42 +10,46 @@
 
  <div id="request">
 
-    <form>
+    <fieldset>
+        <legend>New Request</legend>
         
-        <div id="information">
+        <div id="informationRequest">
 
     <label for="name">Name:<span class="required">*</span></label>
-        <input  type="text" id="name" placeholder="Name request"/>
+        <input  type="text" name="name" placeholder="Name request"/>
 
     <label for="urlBase">Url Base:<span class="required">*</span></label>
-        <input  type="url" id="urlBase" placeholder="Url"/>
+        <input  type="url"  name="urlBase" placeholder="Url"/>
 
     <label for="action">Action:<span class="required">*</span></label>
-        <input  type="text" id="action" placeholder="Action"/>
+        <input  type="text"   name= "action"placeholder="Action"/>
 
     <label for="httpVerb">Http Verb:<span class="required">*</span></label>
-        <input list="httpVerb" name="httpVerb">
+        <input  type="text" list="httpVerb" name="httpVerb">
             <datalist id="httpVerb">
-                <option value="GET">
-                <option value="PUT">
+                <option value="GET">               
                 <option value="POST">
-                <option value="PATH">
-                <option value="DELETE">
+               
+                
                 </datalist>
+            
 
             </div>
+        <h1>Parameter</h1>
+        <div id="informationParameter">
+            <label for="action">UrlKey<span class="required">*</span></label>
+                <input  type="text"   name= "urlKey"placeholder=""/>UrlKey
 
-        <div id="parameters">
-            
-             <label for="key">Key:<span class="required">*</span></label>
-                <input  type="text" id="key"/>
-
-            <label for="key">Value:<span class="required">*</span></label>
-                <input  type="text" id="Value"/>
-
-
+            <label for="action">Value<span class="required">*</span></label>
+                <input  type="text"   name= "value"placeholder="value"/>
         </div>
-    </form>
+
+        <p>
+            <input type="submit" value= "New Request" />
+        </p>
+
+        
+   </fieldset>
 
 
 </div>

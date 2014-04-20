@@ -20,19 +20,23 @@ namespace appRequest.Controllers
         {
             return View();
         }
-        [HttpPost]
-        public ActionResult Create(string  name="",string urlBase="",string action="")
+
+        public ActionResult Create()
         {
-            Request request = new Request();
-            request.name = name;
-            request.urlBase = urlBase;
-            request.action = action;
-            if (ModelState.IsValid)
-            {
-                db.Requests.Add(request);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+            /*Request request = db.Requests.Find(Id);
+            ViewBag.request = request;*/
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(string  name,string urlBase,string action,string httpVerb,string urlKey, string Value)
+        {
+            QueryRequestParameter rp = new QueryRequestParameter();
+            rp.request.name = name;
+            rp.request.urlBase = urlBase;
+            rp.request.action = action;
+            rp.request.httpVerb = httpVerb;
+            rp.parameter.UrlKey = urlKey;
+            rp.parameter.Value = Value;
            
             return View();
         }

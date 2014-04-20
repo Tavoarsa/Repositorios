@@ -9,9 +9,11 @@ namespace appRequest.Models
     [Table("Parameter")]
     public class Parameter
     {
-        public int Id{get; set; }
-        public int Id_Request { get; set; }
-        public string UrlKey { set; get; }
-        public string Values { get; set; }
+        public int Id{get;set;}
+        public Request Id_Request{get;set;}
+        public string UrlKey{get;set;}
+        public string Value{get;set;}
+
+
     }
 }
