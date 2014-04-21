@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+@using (Html.BeginForm()) {
+    <fieldset>
+        <legend>Request</legend>
+
+        <input name="id" type="hidden" value="@ViewBag.request.Id"/>
+        <div class="editor-label">
+            <label>Name</label>
+        </div>
+        <div class="editor-field">
+            <input name="name" value="@ViewBag.request.name"/>
+        </div>
+        <div class="editor-label">
+            <label>UlrBase</label>
+        </div>
+        <div class="editor-field">
+            <input name="urlBase" value="@ViewBag.request.urlBase"/>
+        </div>
+
+        <div class="editor-label">
+            <label>Action</label>
+        </div>
+        <div class="editor-field">
+            <input name="action" value="@ViewBag.request.action"/>
+        </div>
+        <div class="editor-label">
+            <label>Http Verb</label>
+        </div>
+        <div class="editor-field">
+            <input name="httpVerb" value="@ViewBag.request.httpVerb"/>
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

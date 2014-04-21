@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Request</h2>
+
+
+<table>
+    <tr>
+       
+        <th>Name</th>
+        <th>Url Base</th>
+        <th>Action</th>
+        <th>Http Verb</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var item in ViewBag.request)
+    {
+        <tr>
+            
+            <td>@item.name</td>
+            <td>@item.urlBase</td>
+            <td>@item.action</td>
+            <td>@item.httpVerb</td>
+            <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id }) |
+                    
+                   
+                </td>
+        </tr>
+    }
+</table>
+
+

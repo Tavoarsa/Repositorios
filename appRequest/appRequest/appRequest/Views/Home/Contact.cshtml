@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+@using (Html.BeginForm())
+{  
+<br />
+<br />
+<br />
+<div id="d2" align="center">
+
+     <form > 
+
+
+<label for="name" >Name: </label> 
+<input type="text" id="name" name="name" value="" placeholder="you name" required="required"  /> 
+
+<label for="urlbase" >URL Base: </label> 
+<input type="text" id="urlbase" name="urlbase" value="" placeholder="URL Base" required="required"  /> 
+
+ <label for="action" >Action: </label> 
+<input type="text" id="action" name="action" value="" placeholder="Action" required="required"  />
+
+ <label for="httpverb" >HTTP Verb: </label>      
+                <select name="httpVerb"id="httpVerb">
+                        <option value="GET" selected="">GET</option>
+                        <option value="POST">POST</option>
+                </select>
+    <br />
+    <br />
+    <br />
+
+ <label for="parameter" >Parameter: </label>   <br />
+ <button id="Button">Agregar Parameter</button>
+
+
+
+         
+<div id="contenedor">
+    <div class="added">
+        <input type="text" name="key_1" id="key_1" placeholder="Key1"/>
+        <input type="text" name="parameter_1" id="parameter_1" placeholder="Parameter1"/><a href="#" class="eliminar">&times;</a>
+    </div>
+</div>
+         <br />
+          <br />
+    <button id="myButton">New</button>
+    <button id="myButton1">Remove</button>
+    <button id="myButton2">Run</button>
+    
+          </form > 
+</div>
+
+
+
+<script type="text/javascript">
+    $("#myButton").click(function () {
+        $.ajax({
+            url: '/Home/Contact',
+            type: '',
+            data: {},
+        })
+
+    });
+
+    $(document).ready(function () {
+
+        var MaxInputs = 8; //Número Maximo de Campos
+        var contenedor = $("#contenedor"); //ID del contenedor
+        var AddButton = $("#Button"); //ID del Botón Agregar
+
+        //var x = número de campos existentes en el contenedor
+        var x = $("#contenedor div").length + 1;
+        var FieldCount = x - 1; //para el seguimiento de los campos
+
+        $(AddButton).click(function (e) {
+            if (x <= MaxInputs) //max input box allowed
+            {
+                FieldCount++;
+                //agregar campo
+                $(contenedor).append('<div><input type="text" name="key_' + FieldCount + '" id="key_' + FieldCount + '" placeholder="key ' + FieldCount + '"/>&nbsp<input type="text" name="parameter_' + FieldCount + '" id="parameter_' + FieldCount + '" placeholder="parameter ' + FieldCount + '"/><a href="#" class="eliminar">&times;</a></div>');
+                x++; //text box increment
+            }
+            return false;
+        });
+
+        $("body").on("click", ".eliminar", function (e) { //click en eliminar campo
+            if (x > 1) {
+                $(this).parent('div').remove(); //eliminar el campo
+                x--;
+            }
+            return false;
+        });
+    });
+</script>
+
+
+}
